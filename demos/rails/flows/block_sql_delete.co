@@ -1,0 +1,13 @@
+import llm
+
+flow block_sql_delete
+  priority 20
+  when user said regex "(?i).*\\bdelete\\b\\s+.*\\bfrom\\b.*"
+    bot say "Sorry, I can't help with that."
+    halt
+
+flow allow_other_sql
+  priority 20
+  when user said regex "(?i).*\\b(select|insert|update|create|alter|truncate)\\b.*"
+    bot say "That SQL statement is allowed. If I was wired up to a database it would run."
+    halt

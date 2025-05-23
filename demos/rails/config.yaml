@@ -1,0 +1,2 @@
+colang_version: "2.x"
+include_core_rails: true

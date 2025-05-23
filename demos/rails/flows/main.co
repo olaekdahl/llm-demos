@@ -1,0 +1,5 @@
+import llm
+
+flow main
+  when user said anything
+    bot executes respond
